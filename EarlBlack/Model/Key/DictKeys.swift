@@ -16,13 +16,14 @@ struct MyKey {
         static let image = "image"
         static let change_percent_24_hr = "price_change_percentage_24h"
     }
-    
+
     struct User {
         static let id = "id"
         static let password = "password"
-        static let user_name = "user_name"
+        static let username = "username"
         static let first_name = "first_name"
-        static let sir_name = "sir_name"
+        static let last_name = "last_name"
+        static let phone = "phone"
         static let email = "email"
     }
 }

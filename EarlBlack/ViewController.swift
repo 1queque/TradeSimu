@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    
     @IBOutlet weak var coinTableView: UITableView!
     
     var coin_info_instances = [CoinInfo]()
@@ -36,10 +35,10 @@ class ViewController: UIViewController{
         coinTableView.delegate = self
         coinTableView.dataSource = self
     }
-    
 }
 
-extension ViewController:  UITableViewDelegate, UITableViewDataSource {
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -54,5 +53,17 @@ extension ViewController:  UITableViewDelegate, UITableViewDataSource {
         cell.coinInfoLabel.text = coin_info_instances[indexPath.row].symbol + " " + String(coin_info_instances[indexPath.row].price)
         cell.coinChangeLabel.text = String(coin_info_instances[indexPath.row].change_percent_24_hr) + "%"
         return cell
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zVV-Ph-NPF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zVV-Ph-NPF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -126,6 +126,19 @@
                                     <action selector="sign_up_button:" destination="ZkI-rW-EQj" eventType="touchUpInside" id="KU1-lM-yNG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-Hv-clI">
+                                <rect key="frame" x="130" y="578" width="154" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0o4-yu-NNn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign-In">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sign_in_button:" destination="ZkI-rW-EQj" eventType="touchUpInside" id="oNv-dQ-cUF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e7h-yW-kfC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -135,9 +148,12 @@
                             <constraint firstItem="BIC-IZ-fhQ" firstAttribute="top" secondItem="33r-ck-nI3" secondAttribute="bottom" constant="10" id="Bep-vZ-rX8"/>
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="BIC-IZ-fhQ" secondAttribute="trailing" constant="30" id="MwG-zy-yNX"/>
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="aVa-Ug-mvg" secondAttribute="trailing" constant="30" id="Pa9-ct-boq"/>
+                            <constraint firstItem="nlI-Hv-clI" firstAttribute="top" secondItem="BIC-IZ-fhQ" secondAttribute="bottom" constant="150" id="a3J-8e-vGy"/>
+                            <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="nlI-Hv-clI" secondAttribute="trailing" constant="130" id="bpc-P4-jYA"/>
                             <constraint firstItem="BIC-IZ-fhQ" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="30" id="gQA-ip-TqB"/>
                             <constraint firstItem="33r-ck-nI3" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="30" id="mrs-LP-npK"/>
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="33r-ck-nI3" secondAttribute="trailing" constant="30" id="p2E-zm-1yw"/>
+                            <constraint firstItem="nlI-Hv-clI" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="130" id="pVq-W2-x7A"/>
                             <constraint firstItem="aVa-Ug-mvg" firstAttribute="top" secondItem="BIC-IZ-fhQ" secondAttribute="bottom" constant="20" id="zaK-OJ-G1z"/>
                         </constraints>
                     </view>
@@ -159,64 +175,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6PC-Jy-9OH">
-                                <rect key="frame" x="0.0" y="84" width="414" height="600"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VI0-n5-I4g" customClass="SignUpTableViewStyle" customModule="EarlBlack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="414" height="780"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6PC-Jy-9OH">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="740"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="HK5-S4-SAa" id="20T-pN-0ak"/>
+                                            <outlet property="delegate" destination="HK5-S4-SAa" id="SiT-V0-K2o"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="vRp-0N-Rcy"/>
+                                    <constraint firstAttribute="bottom" secondItem="6PC-Jy-9OH" secondAttribute="bottom" id="9lA-vX-RpT"/>
+                                    <constraint firstItem="6PC-Jy-9OH" firstAttribute="top" secondItem="VI0-n5-I4g" secondAttribute="top" constant="40" id="Qox-2h-xJL"/>
+                                    <constraint firstAttribute="trailing" secondItem="6PC-Jy-9OH" secondAttribute="trailing" id="ejw-04-LQD"/>
+                                    <constraint firstItem="6PC-Jy-9OH" firstAttribute="leading" secondItem="VI0-n5-I4g" secondAttribute="leading" id="nwl-Nu-fkJ"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sign_up_cell" rowHeight="70" id="ez9-f4-cTl" customClass="SignUpTableViewCell" customModule="EarlBlack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ez9-f4-cTl" id="BKj-VE-fNd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-Vm-MwC">
-                                                    <rect key="frame" x="70" y="11" width="274" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zbD-Vm-MwC" secondAttribute="bottom" id="8Z9-dh-B6W"/>
-                                                <constraint firstItem="zbD-Vm-MwC" firstAttribute="top" secondItem="BKj-VE-fNd" secondAttribute="topMargin" id="AIt-9Y-Q58"/>
-                                                <constraint firstItem="zbD-Vm-MwC" firstAttribute="leading" secondItem="BKj-VE-fNd" secondAttribute="leadingMargin" constant="50" id="Rbo-8a-53c"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zbD-Vm-MwC" secondAttribute="trailing" constant="50" id="j3t-Xs-04N"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="sign_up_text_field" destination="zbD-Vm-MwC" id="s3M-gu-SPN"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlO-7J-2Ao">
-                                <rect key="frame" x="130" y="444" width="154" height="40"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCz-ga-oM9">
+                                <rect key="frame" x="20" y="74" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eg7-8k-Hqe"/>
+                                    <constraint firstAttribute="height" constant="50" id="SmJ-2e-Vvs"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SIGN-UP">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="sign_up_button:" destination="HK5-S4-SAa" eventType="touchUpInside" id="Mii-fp-Q0R"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L38-ek-Xr3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="L38-ek-Xr3" firstAttribute="trailing" secondItem="QlO-7J-2Ao" secondAttribute="trailing" constant="130" id="0am-xd-wxQ"/>
-                            <constraint firstItem="6PC-Jy-9OH" firstAttribute="top" secondItem="L38-ek-Xr3" secondAttribute="top" constant="40" id="Bgg-KH-g7Z"/>
-                            <constraint firstItem="6PC-Jy-9OH" firstAttribute="leading" secondItem="L38-ek-Xr3" secondAttribute="leading" id="N54-lI-y7W"/>
-                            <constraint firstItem="QlO-7J-2Ao" firstAttribute="top" secondItem="6PC-Jy-9OH" secondAttribute="bottom" constant="-240" id="See-Ld-ErX"/>
-                            <constraint firstItem="L38-ek-Xr3" firstAttribute="trailing" secondItem="6PC-Jy-9OH" secondAttribute="trailing" id="urK-cc-2VA"/>
-                            <constraint firstItem="QlO-7J-2Ao" firstAttribute="leading" secondItem="L38-ek-Xr3" secondAttribute="leading" constant="130" id="wGi-hU-dM8"/>
+                            <constraint firstAttribute="bottom" secondItem="VI0-n5-I4g" secondAttribute="bottom" constant="-20" id="8F8-Te-Ue8"/>
+                            <constraint firstItem="YCz-ga-oM9" firstAttribute="top" secondItem="L38-ek-Xr3" secondAttribute="top" constant="30" id="Jue-36-PhE"/>
+                            <constraint firstItem="L38-ek-Xr3" firstAttribute="trailing" secondItem="YCz-ga-oM9" secondAttribute="trailing" constant="20" id="aG1-iu-owC"/>
+                            <constraint firstItem="VI0-n5-I4g" firstAttribute="trailing" secondItem="L38-ek-Xr3" secondAttribute="trailing" id="qgn-i9-o18"/>
+                            <constraint firstItem="VI0-n5-I4g" firstAttribute="top" secondItem="YCz-ga-oM9" secondAttribute="bottom" constant="12" id="r65-mn-AoI"/>
+                            <constraint firstItem="YCz-ga-oM9" firstAttribute="leading" secondItem="L38-ek-Xr3" secondAttribute="leading" constant="20" id="w4S-Cr-kXq"/>
+                            <constraint firstItem="VI0-n5-I4g" firstAttribute="leading" secondItem="L38-ek-Xr3" secondAttribute="leading" id="zSm-Mq-prf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign-up" id="NUX-Yb-3Dd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3bd-y4-r8p">
+                            <connections>
+                                <action selector="sign_up_done_button:" destination="HK5-S4-SAa" id="Ozo-ZI-uYh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sign_up_table_view" destination="6PC-Jy-9OH" id="r5C-2t-fMp"/>
                     </connections>
@@ -247,6 +268,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
