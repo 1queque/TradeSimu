@@ -17,6 +17,7 @@ enum UserCodingKeys: String, CodingKey, CaseIterable {
     case phone = "phone"
 }
 
+
 class User: Codable{
     typealias IdentifierType = Identifier<User, String>
     
@@ -28,14 +29,14 @@ class User: Codable{
     let email:Email
     let phone:String
     
-    init(from user_dict:[String:Any]) {
+    init(from user_dictionary:[String:Any]) {
         self.id = IdentifierType(DefaultValue.Empty.string)
-        self.username = user_dict[MyKey.User.username] as? String ?? DefaultValue.Empty.string
-        self.first_name = user_dict[MyKey.User.first_name] as? String ?? DefaultValue.Empty.string
-        self.last_name = user_dict[MyKey.User.last_name] as? String ?? DefaultValue.Empty.string
-        self.password = user_dict[MyKey.User.password] as? String ?? DefaultValue.Empty.string
-        self.email = user_dict[MyKey.User.email] as? Email ?? Email(DefaultValue.Empty.string)
-        self.phone = user_dict[MyKey.User.phone] as? String ?? DefaultValue.Empty.string
+        self.username = user_dictionary[MyKey.User.username] as? String ?? DefaultValue.Empty.string
+        self.first_name = user_dictionary[MyKey.User.first_name] as? String ?? DefaultValue.Empty.string
+        self.last_name = user_dictionary[MyKey.User.last_name] as? String ?? DefaultValue.Empty.string
+        self.password = user_dictionary[MyKey.User.password] as? String ?? DefaultValue.Empty.string
+        self.email = Email(user_dictionary[MyKey.User.email] as? String ?? DefaultValue.Empty.string)
+        self.phone = user_dictionary[MyKey.User.phone] as? String ?? DefaultValue.Empty.string
     }
     
     required init(from decoder: Decoder) throws {
@@ -61,28 +62,20 @@ extension User{
         try container.encode(phone, forKey: .phone)
     }
     
-    static func get_all_coding_keys() -> Array<String> {
+    func get_all_data(){
+        print(self.id.wrappedValue)
+        print(self.username)
+        print(self.first_name)
+        print(self.last_name)
+        print(self.email)
+        print(self.password)
+        print(self.phone)
+    }
+    
+    static func add_all_coding_keys_to_array() -> Array<String> {
         var coding_keys_array = [String]()
-        for key in UserCodingKeys.allCases {
-            if key.stringValue != UserCodingKeys.id.stringValue {
-                if key.stringValue.contains("_"){
-                    coding_keys_array.append(key.stringValue.replacingOccurrences(of: "_", with: "").capitalizingFirstLetter())
-                }
-                else{
-                    coding_keys_array.append(key.stringValue.capitalizingFirstLetter())
-                }
-            }
-        }
+        UserCodingKeys.allCases.forEach { coding_keys_array.append($0.stringValue.capitalize_first_letter_and_replace_underscore()) }
+        coding_keys_array.remove(at: 0) // removes "id" case from keys array
         return coding_keys_array
-    }
-}
-
-extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).capitalized + dropFirst()
-    }
-
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
     }
 }

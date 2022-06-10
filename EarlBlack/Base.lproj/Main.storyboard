@@ -234,7 +234,7 @@
                     <navigationItem key="navigationItem" title="Sign-up" id="NUX-Yb-3Dd">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="3bd-y4-r8p">
                             <connections>
-                                <action selector="sign_up_done_button:" destination="HK5-S4-SAa" id="Ozo-ZI-uYh"/>
+                                <action selector="submit_sign_up_table_view_through_done_button:" destination="HK5-S4-SAa" id="eOj-MT-woO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

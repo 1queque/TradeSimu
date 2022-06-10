@@ -8,16 +8,18 @@
 import Foundation
 
 class SignUpViewModel{
-    var table_view_list:[String:Any]
     
-    init(from table_view_list: [String:Any]) {
-        self.table_view_list = table_view_list
+    func set_data_to_encode(from form_dictionary:[String:Any]){
+        let user = User(from: form_dictionary)
+        let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
+        do {
+            let jsonData = try encoder.encode(user.self)
+            let account = try decoder.decode(User.self, from: jsonData)
+            print(account.get_all_data())
+        }catch let error {
+            print(error)
+        }
     }
-    
-    func set_data_to_encode(){
-        let user = User(from: self.table_view_list)
-        print(user.username)
-    }
-    
     
 }
