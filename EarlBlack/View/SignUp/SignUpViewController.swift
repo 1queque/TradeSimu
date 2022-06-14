@@ -60,12 +60,12 @@ extension SignUpViewController:  UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sign_up_cell", for: indexPath) as! SignUpTableViewCell
+        let row = indexPath.row
+        
         cell.title_label.text = sign_up_view_model.user_coding_keys_array[indexPath.section]
-        cell.sign_up_text_field.placeholder = sign_up_view_model.user_coding_keys_array[indexPath.section]
-        if cell.title_label.text == "Password"{
-            cell.sign_up_text_field.isSecureTextEntry = true
-            cell.sign_up_text_field.passwordRules = UITextInputPasswordRules(descriptor: "minlength: 8; required: lower; required: upper; required: digit; required: [!%*,.?_~];")
-        }
+        cell.sign_up_text_field.placeholder = "Enter " + sign_up_view_model.user_coding_keys_array[indexPath.section]
+        
+        if cell.title_label.text == "Password"{ cell.sign_up_text_field.isSecureTextEntry = true }
         sign_up_form_dictionary[cell.title_label.text?.lowercase_all_letter_and_replace_underscore() ?? ""] = cell.sign_up_text_field
         return cell
     }
