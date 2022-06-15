@@ -14,7 +14,7 @@ enum UserCodingKeys: String, CodingKey, CaseIterable {
     case last_name = "last_name"
     case password = "password"
     case email = "email"
-    case phone = "phone"
+    case phone_number = "phone_number"
 }
 
 
@@ -27,7 +27,7 @@ class User: Codable{
     let last_name:String
     let password:String
     let email:Email
-    let phone:String
+    let phone_number:String
     
     init(from user_dictionary:[String:Any]) {
         self.id = IdentifierType(DefaultValue.Empty.string)
@@ -36,7 +36,7 @@ class User: Codable{
         self.last_name = user_dictionary[MyKey.User.last_name] as? String ?? DefaultValue.Empty.string
         self.password = user_dictionary[MyKey.User.password] as? String ?? DefaultValue.Empty.string
         self.email = Email(user_dictionary[MyKey.User.email] as? String ?? DefaultValue.Empty.string)
-        self.phone = user_dictionary[MyKey.User.phone] as? String ?? DefaultValue.Empty.string
+        self.phone_number = user_dictionary[MyKey.User.phone_number] as? String ?? DefaultValue.Empty.string
     }
     
     required init(from decoder: Decoder) throws {
@@ -47,7 +47,7 @@ class User: Codable{
         self.last_name = try container.decode(String.self, forKey: .last_name)
         self.password = try container.decode(String.self, forKey: .password)
         self.email = try container.decode(Email.self, forKey: .email)
-        self.phone = try container.decode(String.self, forKey: .phone)
+        self.phone_number = try container.decode(String.self, forKey: .phone_number)
     }
 }
 
@@ -59,7 +59,7 @@ extension User{
         try container.encode(first_name, forKey: .first_name)
         try container.encode(email.email, forKey: .email)
         try container.encode(last_name, forKey: .last_name)
-        try container.encode(phone, forKey: .phone)
+        try container.encode(phone_number, forKey: .phone_number)
     }
     
     func get_all_data(){
@@ -69,7 +69,7 @@ extension User{
         print(self.last_name)
         print(self.email)
         print(self.password)
-        print(self.phone)
+        print(self.phone_number)
     }
     
     static func add_all_coding_keys_to_array() -> Array<String> {

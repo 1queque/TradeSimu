@@ -16,7 +16,7 @@ extension String{
         return self.lowercased().replacingOccurrences(of: " ", with: "_")
     }
     
-    var isPhoneNumber: Bool{
+    var is_phone_number_valid: Bool{
         do {
             let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
             let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, self.count))
@@ -30,14 +30,14 @@ extension String{
         }
     }
     
-    var isPasswordValid: Bool{
-        let passwordRegEx = "^(?=.*[a-z])(?=.*[$@$#!½*?&])[A-Za-z\\d$@$#!%*?&]{8,}"
+    var is_password_valid: Bool{
+        let passwordRegEx = "^(?=.*[a-z])[A-Za-z\\d$@$#!%*?&]{8,}"
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return passwordTest.evaluate(with: self)
     }
     
-    var isEmailValid: Bool{
+    var is_email_valid: Bool{
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)

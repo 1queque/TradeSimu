@@ -23,7 +23,7 @@ struct MyKey {
         static let username = "username"
         static let first_name = "first_name"
         static let last_name = "last_name"
-        static let phone = "phone"
+        static let phone_number = "phone_number"
         static let email = "email"
     }
 }

@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-Hv-clI">
-                                <rect key="frame" x="130" y="578" width="154" height="60"/>
+                                <rect key="frame" x="30" y="578" width="354" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0o4-yu-NNn"/>
                                 </constraints>
@@ -141,7 +141,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e7h-yW-kfC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="33r-ck-nI3" firstAttribute="top" secondItem="e7h-yW-kfC" secondAttribute="top" constant="170" id="5C6-cT-45d"/>
                             <constraint firstItem="aVa-Ug-mvg" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="240" id="6Un-c5-wXA"/>
@@ -149,11 +149,11 @@
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="BIC-IZ-fhQ" secondAttribute="trailing" constant="30" id="MwG-zy-yNX"/>
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="aVa-Ug-mvg" secondAttribute="trailing" constant="30" id="Pa9-ct-boq"/>
                             <constraint firstItem="nlI-Hv-clI" firstAttribute="top" secondItem="BIC-IZ-fhQ" secondAttribute="bottom" constant="150" id="a3J-8e-vGy"/>
-                            <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="nlI-Hv-clI" secondAttribute="trailing" constant="130" id="bpc-P4-jYA"/>
+                            <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="nlI-Hv-clI" secondAttribute="trailing" constant="30" id="bpc-P4-jYA"/>
                             <constraint firstItem="BIC-IZ-fhQ" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="30" id="gQA-ip-TqB"/>
                             <constraint firstItem="33r-ck-nI3" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="30" id="mrs-LP-npK"/>
                             <constraint firstItem="e7h-yW-kfC" firstAttribute="trailing" secondItem="33r-ck-nI3" secondAttribute="trailing" constant="30" id="p2E-zm-1yw"/>
-                            <constraint firstItem="nlI-Hv-clI" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="130" id="pVq-W2-x7A"/>
+                            <constraint firstItem="nlI-Hv-clI" firstAttribute="leading" secondItem="e7h-yW-kfC" secondAttribute="leading" constant="30" id="pVq-W2-x7A"/>
                             <constraint firstItem="aVa-Ug-mvg" firstAttribute="top" secondItem="BIC-IZ-fhQ" secondAttribute="bottom" constant="20" id="zaK-OJ-G1z"/>
                         </constraints>
                     </view>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azs-yW-Vmz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449.27536231884062" y="751.33928571428567"/>
+            <point key="canvasLocation" x="-1359" y="771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRp-vL-f1c">
@@ -264,10 +264,49 @@
             </objects>
             <point key="canvasLocation" x="-1359.4202898550725" y="67.633928571428569"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="m2t-7T-SCA">
+            <objects>
+                <viewController storyboardIdentifier="register_storyboard_id" title="Register" id="TLi-Gk-ZIZ" customClass="RegisterViewController" customModule="EarlBlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fxe-gL-AON">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVI-Sr-R0a">
+                                <rect key="frame" x="0.0" y="198" width="414" height="500"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="JN1-XY-2z6"/>
+                                </constraints>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S4q-Q8-A7C"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="FVI-Sr-R0a" firstAttribute="centerY" secondItem="Fxe-gL-AON" secondAttribute="centerY" id="7rA-zj-fSP"/>
+                            <constraint firstItem="FVI-Sr-R0a" firstAttribute="leading" secondItem="S4q-Q8-A7C" secondAttribute="leading" id="TGk-1j-0Wf"/>
+                            <constraint firstItem="FVI-Sr-R0a" firstAttribute="centerX" secondItem="Fxe-gL-AON" secondAttribute="centerX" id="cyA-X9-pj2"/>
+                            <constraint firstItem="S4q-Q8-A7C" firstAttribute="trailing" secondItem="FVI-Sr-R0a" secondAttribute="trailing" id="z5z-Bg-xk3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="register_form_view" destination="FVI-Sr-R0a" id="9RP-Mb-qog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON9-VV-Q8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="771"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
