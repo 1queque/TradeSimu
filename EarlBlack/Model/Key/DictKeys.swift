@@ -34,3 +34,4 @@ struct DefaultValue {
         static let double = 0.0
     }
 }
+

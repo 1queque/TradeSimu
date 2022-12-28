@@ -13,9 +13,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var password_text_field: UITextField!
     
+    let login_view_model = LoginViewModel()
+    
     @IBAction func sign_in_button(_ sender: Any) {
-        print(email_text_field.text!)
-        print(password_text_field.text!)
+        let res = login_view_model.check_fields(email: email_text_field.text ?? "", password: password_text_field.text ?? "")
+        print(res.successful)
     }
     
     @IBAction func sign_up_button(_ sender: Any) {

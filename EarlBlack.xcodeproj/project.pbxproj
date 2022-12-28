@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C33EB41D27FCBF4B00996EE5 /* QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33EB41C27FCBF4B00996EE5 /* QueryItems.swift */; };
+		C343B826295C23B900343889 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C343B825295C23B900343889 /* LoadingViewController.swift */; };
+		C343B829295C270B00343889 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C343B827295C270B00343889 /* LoginFormViewController.swift */; };
+		C343B82A295C270B00343889 /* LoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C343B828295C270B00343889 /* LoginFormViewController.xib */; };
+		C350FDD72860A290004D2F58 /* FirebaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350FDD62860A290004D2F58 /* FirebaseEndpoint.swift */; };
+		C350FDDC2860A598004D2F58 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350FDDB2860A598004D2F58 /* FirebaseManager.swift */; };
+		C35884672860809C001373A5 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = C35884662860809C001373A5 /* CodableFirebase */; };
 		C35C8BD22850C22B00331481 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C8BD12850C22B00331481 /* CoinViewModel.swift */; };
 		C3635ACF27B66AD5009D9B5E /* CoinApiUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3635ACE27B66AD5009D9B5E /* CoinApiUrlSession.swift */; };
 		C3635AD227BD0EEC009D9B5E /* CoinInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3635AD127BD0EEC009D9B5E /* CoinInfo.swift */; };
@@ -25,6 +31,7 @@
 		C393E21A2846B17A007705E2 /* DictKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393E2192846B17A007705E2 /* DictKeys.swift */; };
 		C393E21C28478B6F007705E2 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393E21B28478B6F007705E2 /* Identifier.swift */; };
 		C393E21E2847BBE1007705E2 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393E21D2847BBE1007705E2 /* Email.swift */; };
+		C39D1DB72859FDC900D5F5E8 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D1DB62859FDC900D5F5E8 /* CoinViewController.swift */; };
 		C39D841A27DB92B3000BCE6C /* UrlEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D841927DB92B3000BCE6C /* UrlEndpoint.swift */; };
 		C3A77F81285210B30020A372 /* RegisterFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A77F80285210B30020A372 /* RegisterFormViewModel.swift */; };
 		C3AF93302858992400466387 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF932F2858992400466387 /* RegisterViewController.swift */; };
@@ -32,6 +39,10 @@
 		C3AF93362858AD5B00466387 /* RegisterFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AF93342858AD5B00466387 /* RegisterFormViewController.xib */; };
 		C3B840792849F5CE00B77D64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B840782849F5CE00B77D64 /* LoginViewController.swift */; };
 		C3B867B62853694A001396AD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B867B52853694A001396AD /* StringExtension.swift */; };
+		C3DCEAE52897C7A4004280AF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DCEAE42897C7A4004280AF /* LoginViewModel.swift */; };
+		C3E45C93285B3B8600A6DB92 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3E45C92285B3B8600A6DB92 /* Alamofire */; };
+		C3E45C95285B3F8700A6DB92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3E45C94285B3F8700A6DB92 /* GoogleService-Info.plist */; };
+		C3E45C98285B412F00A6DB92 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C3E45C97285B412F00A6DB92 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +64,11 @@
 
 /* Begin PBXFileReference section */
 		C33EB41C27FCBF4B00996EE5 /* QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItems.swift; sourceTree = "<group>"; };
+		C343B825295C23B900343889 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		C343B827295C270B00343889 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		C343B828295C270B00343889 /* LoginFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFormViewController.xib; sourceTree = "<group>"; };
+		C350FDD62860A290004D2F58 /* FirebaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEndpoint.swift; sourceTree = "<group>"; };
+		C350FDDB2860A598004D2F58 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		C35C8BD12850C22B00331481 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 		C3635ACE27B66AD5009D9B5E /* CoinApiUrlSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinApiUrlSession.swift; sourceTree = "<group>"; };
 		C3635AD127BD0EEC009D9B5E /* CoinInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfo.swift; sourceTree = "<group>"; };
@@ -74,6 +90,7 @@
 		C393E2192846B17A007705E2 /* DictKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictKeys.swift; sourceTree = "<group>"; };
 		C393E21B28478B6F007705E2 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		C393E21D2847BBE1007705E2 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		C39D1DB62859FDC900D5F5E8 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		C39D841927DB92B3000BCE6C /* UrlEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEndpoint.swift; sourceTree = "<group>"; };
 		C3A77F80285210B30020A372 /* RegisterFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewModel.swift; sourceTree = "<group>"; };
 		C3AF932F2858992400466387 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +98,8 @@
 		C3AF93342858AD5B00466387 /* RegisterFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFormViewController.xib; sourceTree = "<group>"; };
 		C3B840782849F5CE00B77D64 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C3B867B52853694A001396AD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C3DCEAE42897C7A4004280AF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C3E45C94285B3F8700A6DB92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35884672860809C001373A5 /* CodableFirebase in Frameworks */,
+				C3E45C98285B412F00A6DB92 /* FirebaseDatabase in Frameworks */,
+				C3E45C93285B3B8600A6DB92 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +130,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C3635ACD27B66ABD009D9B5E /* Services */ = {
+		C343B822295C237200343889 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				C343B825295C23B900343889 /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		C350FDD82860A558004D2F58 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C350FDD62860A290004D2F58 /* FirebaseEndpoint.swift */,
+				C350FDDB2860A598004D2F58 /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		C350FDD92860A566004D2F58 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				C39D841927DB92B3000BCE6C /* UrlEndpoint.swift */,
+				C33EB41C27FCBF4B00996EE5 /* QueryItems.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
+		C350FDDA2860A575004D2F58 /* CoinAPI */ = {
 			isa = PBXGroup;
 			children = (
 				C3635ACE27B66AD5009D9B5E /* CoinApiUrlSession.swift */,
-				C39D841927DB92B3000BCE6C /* UrlEndpoint.swift */,
-				C33EB41C27FCBF4B00996EE5 /* QueryItems.swift */,
+			);
+			path = CoinAPI;
+			sourceTree = "<group>";
+		};
+		C3635ACD27B66ABD009D9B5E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C350FDDA2860A575004D2F58 /* CoinAPI */,
+				C350FDD92860A566004D2F58 /* URL */,
+				C350FDD82860A558004D2F58 /* Firebase */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -134,6 +190,7 @@
 			children = (
 				C35C8BD12850C22B00331481 /* CoinViewModel.swift */,
 				C3A77F80285210B30020A372 /* RegisterFormViewModel.swift */,
+				C3DCEAE42897C7A4004280AF /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +229,7 @@
 				C386325527B665B5007A45AD /* Main.storyboard */,
 				C386325827B665B7007A45AD /* Assets.xcassets */,
 				C386325D27B665B7007A45AD /* Info.plist */,
+				C3E45C94285B3F8700A6DB92 /* GoogleService-Info.plist */,
 			);
 			path = EarlBlack;
 			sourceTree = "<group>";
@@ -211,12 +269,32 @@
 			path = Key;
 			sourceTree = "<group>";
 		};
+		C39D1DB42859FD8000D5F5E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C3B840782849F5CE00B77D64 /* LoginViewController.swift */,
+				C343B827295C270B00343889 /* LoginFormViewController.swift */,
+				C343B828295C270B00343889 /* LoginFormViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C39D1DB52859FD8700D5F5E8 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				C37BD13C2816862D005BDDE5 /* CoinTableViewCell.swift */,
+				C39D1DB62859FDC900D5F5E8 /* CoinViewController.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
 		C39D841427D7837F000BCE6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C343B822295C237200343889 /* Loading */,
+				C39D1DB52859FD8700D5F5E8 /* Coin */,
+				C39D1DB42859FD8000D5F5E8 /* Login */,
 				C3AF932E2858968900466387 /* Register */,
-				C37BD13C2816862D005BDDE5 /* CoinTableViewCell.swift */,
-				C3B840782849F5CE00B77D64 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +333,11 @@
 			dependencies = (
 			);
 			name = EarlBlack;
+			packageProductDependencies = (
+				C3E45C92285B3B8600A6DB92 /* Alamofire */,
+				C3E45C97285B412F00A6DB92 /* FirebaseDatabase */,
+				C35884662860809C001373A5 /* CodableFirebase */,
+			);
 			productName = EarlBlack;
 			productReference = C386324C27B665B5007A45AD /* EarlBlack.app */;
 			productType = "com.apple.product-type.application";
@@ -327,6 +410,11 @@
 				Base,
 			);
 			mainGroup = C386324327B665B5007A45AD;
+			packageReferences = (
+				C3E45C91285B3B8600A6DB92 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C3E45C96285B412F00A6DB92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C35884652860809C001373A5 /* XCRemoteSwiftPackageReference "CodableFirebase" */,
+			);
 			productRefGroup = C386324D27B665B5007A45AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,8 +432,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C386325927B665B7007A45AD /* Assets.xcassets in Resources */,
+				C3E45C95285B3F8700A6DB92 /* GoogleService-Info.plist in Resources */,
 				C386325727B665B5007A45AD /* Main.storyboard in Resources */,
 				C3AF93362858AD5B00466387 /* RegisterFormViewController.xib in Resources */,
+				C343B82A295C270B00343889 /* LoginFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,25 +460,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DCEAE52897C7A4004280AF /* LoginViewModel.swift in Sources */,
+				C350FDD72860A290004D2F58 /* FirebaseEndpoint.swift in Sources */,
 				C3AF93352858AD5B00466387 /* RegisterFormViewController.swift in Sources */,
 				C3B840792849F5CE00B77D64 /* LoginViewController.swift in Sources */,
 				C3635ACF27B66AD5009D9B5E /* CoinApiUrlSession.swift in Sources */,
+				C350FDDC2860A598004D2F58 /* FirebaseManager.swift in Sources */,
 				C35C8BD22850C22B00331481 /* CoinViewModel.swift in Sources */,
 				C386325427B665B5007A45AD /* ViewController.swift in Sources */,
 				C3A77F81285210B30020A372 /* RegisterFormViewModel.swift in Sources */,
 				C3635AD227BD0EEC009D9B5E /* CoinInfo.swift in Sources */,
 				C33EB41D27FCBF4B00996EE5 /* QueryItems.swift in Sources */,
+				C343B826295C23B900343889 /* LoadingViewController.swift in Sources */,
 				C386325027B665B5007A45AD /* AppDelegate.swift in Sources */,
 				C3AF93302858992400466387 /* RegisterViewController.swift in Sources */,
 				C3635AD427BD0F1A009D9B5E /* JsonSerializable.swift in Sources */,
 				C37BD13D2816862D005BDDE5 /* CoinTableViewCell.swift in Sources */,
 				C39D841A27DB92B3000BCE6C /* UrlEndpoint.swift in Sources */,
+				C343B829295C270B00343889 /* LoginFormViewController.swift in Sources */,
 				C3B867B62853694A001396AD /* StringExtension.swift in Sources */,
 				C393E21A2846B17A007705E2 /* DictKeys.swift in Sources */,
 				C393E213283FA874007705E2 /* User.swift in Sources */,
 				C393E21E2847BBE1007705E2 /* Email.swift in Sources */,
 				C393E21C28478B6F007705E2 /* Identifier.swift in Sources */,
 				C386325227B665B5007A45AD /* SceneDelegate.swift in Sources */,
+				C39D1DB72859FDC900D5F5E8 /* CoinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +822,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C35884652860809C001373A5 /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+		C3E45C91285B3B8600A6DB92 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C3E45C96285B412F00A6DB92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C35884662860809C001373A5 /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C35884652860809C001373A5 /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
+		C3E45C92285B3B8600A6DB92 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E45C91285B3B8600A6DB92 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C3E45C97285B412F00A6DB92 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E45C96285B412F00A6DB92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C386324427B665B5007A45AD /* Project object */;
 }

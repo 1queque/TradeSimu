@@ -22,12 +22,8 @@ class RegisterFormViewController: UIViewController {
         let text_dictionary:[String: Any] = [form_label.text: form_text_field.text] as? [String: Any] ?? ["": ""]
         let check_text_is_valid_returns = register_form_view_model.check_text_is_valid(from: text_dictionary)
         if check_text_is_valid_returns.is_valid{
-            self.form_key_row += 1
-            register_form[form_label.text?.lowercase_all_letter_and_replace_underscore() ?? ""] = form_text_field.text
-            if form_button.titleLabel?.text! == "SUBMIT"{
-                self.submit_and_back_to_login()
-            }
-            change_form_fields()
+            self.register_form[form_label.text?.lowercase_all_letters_and_replace_underscore() ?? ""] = form_text_field.text
+            self.go_to_next()
         } else {
             show_alert_message(for: check_text_is_valid_returns.alert_message)
         }
@@ -37,7 +33,6 @@ class RegisterFormViewController: UIViewController {
         super.viewDidLoad()
         self.change_form_fields()
     }
-    
 }
 
 extension RegisterFormViewController{
@@ -55,8 +50,21 @@ extension RegisterFormViewController{
         self.present(alert, animated: true, completion: nil)
     }
     
-    func submit_and_back_to_login(){
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+    func go_to_next(){
+        if form_button.titleLabel?.text! == "SUBMIT"{
+            self.submit_and_back_to_login()
+        } else {
+            self.form_key_row += 1
+            change_form_fields()
+        }
     }
     
+    func submit_and_back_to_login(){
+        _ = self.register_form_view_model.set_data_to_encode_and_post(from: self.register_form)
+        if let navController = self.navigationController {
+            navController.popToRootViewController(animated: true)
+        }
+    }
 }
+
+

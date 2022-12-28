@@ -11,7 +11,7 @@
         <!--Coin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="coin_storyboard_id" title="Coin" id="BYZ-38-t0r" customClass="ViewController" customModule="EarlBlack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="coin_storyboard_id" title="Coin" id="BYZ-38-t0r" customClass="CoinViewController" customModule="EarlBlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coinTableView" destination="hVC-UW-jkb" id="z5k-dJ-4Ir"/>
+                        <outlet property="coinTableView" destination="hVC-UW-jkb" id="Xc6-Pd-xu2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,6 +99,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="33r-ck-nI3">
                                 <rect key="frame" x="30" y="258" width="354" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="o0e-hp-pQn"/>
                                 </constraints>
@@ -107,6 +108,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="BIC-IZ-fhQ">
                                 <rect key="frame" x="30" y="348" width="354" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="tVg-Js-dwm"/>
                                 </constraints>
@@ -297,10 +299,45 @@
             </objects>
             <point key="canvasLocation" x="-449" y="771"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="Ifa-y5-A3s">
+            <objects>
+                <viewController id="I5U-4s-2oH" customClass="LoadingViewController" customModule="EarlBlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUL-v0-Ojf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Och-7g-nFm">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="JMi-Wt-hvx"/>
+                                    <constraint firstAttribute="width" constant="100" id="lYs-VK-kfW"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5sU-7m-Umw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Och-7g-nFm" firstAttribute="centerX" secondItem="YUL-v0-Ojf" secondAttribute="centerX" id="8mb-Od-fPZ"/>
+                            <constraint firstItem="Och-7g-nFm" firstAttribute="centerY" secondItem="YUL-v0-Ojf" secondAttribute="centerY" id="Jb6-py-7ek"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="Och-7g-nFm" id="KaI-wh-o2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGa-uk-iY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363.768115942029" y="770.75892857142856"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

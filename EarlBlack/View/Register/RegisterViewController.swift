@@ -19,21 +19,12 @@ class RegisterViewController: UIViewController {
     
     private var activeViewController: UIViewController? {
         didSet {
-            removeInactiveViewController(inactiveViewController: oldValue)
             updateActiveViewController()
         }
     }
 }
 
 extension RegisterViewController {
-    private func removeInactiveViewController(inactiveViewController: UIViewController?) {
-        if let inActiveVC = inactiveViewController {
-            inActiveVC.willMove(toParent: nil)
-            inActiveVC.view.removeFromSuperview()
-            inActiveVC.removeFromParent()
-        }
-    }
-
     private func updateActiveViewController() {
         if let activeVC = activeViewController {
             addChild(activeVC)

@@ -30,7 +30,7 @@ class User: Codable{
     let phone_number:String
     
     init(from user_dictionary:[String:Any]) {
-        self.id = IdentifierType(DefaultValue.Empty.string)
+        self.id = IdentifierType(user_dictionary[MyKey.User.id] as? String ?? DefaultValue.Empty.string)
         self.username = user_dictionary[MyKey.User.username] as? String ?? DefaultValue.Empty.string
         self.first_name = user_dictionary[MyKey.User.first_name] as? String ?? DefaultValue.Empty.string
         self.last_name = user_dictionary[MyKey.User.last_name] as? String ?? DefaultValue.Empty.string
@@ -54,6 +54,7 @@ class User: Codable{
 extension User{
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: UserCodingKeys.self)
+        try container.encode(id.wrappedValue, forKey: .id)
         try container.encode(username, forKey: .username)
         try container.encode(password, forKey: .password)
         try container.encode(first_name, forKey: .first_name)
