@@ -1,0 +1,6 @@
+framework module Pods_EarlBlackTests {
+  umbrella header "Pods-EarlBlackTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

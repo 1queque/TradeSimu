@@ -13,11 +13,19 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var password_text_field: UITextField!
     
+    @IBOutlet weak var sign_in_loading_button: LoginLoadingButton!
+    
     let login_view_model = LoginViewModel()
     
-    @IBAction func sign_in_button(_ sender: Any) {
-        let res = login_view_model.check_fields(email: email_text_field.text ?? "", password: password_text_field.text ?? "")
-        print(res.successful)
+    @IBAction func sign_in_button(_ sender: Any)  {
+        login_view_model.check_user_exists(email: email_text_field.text ?? "", password: password_text_field.text ?? "") { result in
+            if result {
+                print("User exists")
+            } else {
+                print("User does not exist")
+            }
+        }
+        // sign_in_loading_button.animated_button(shoud_load: true)
     }
     
     @IBAction func sign_up_button(_ sender: Any) {

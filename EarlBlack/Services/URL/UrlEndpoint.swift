@@ -36,4 +36,3 @@ extension Endpoint {
         Endpoint(path: "coins/markets", query_items: query_items)
     }
 }
-
