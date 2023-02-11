@@ -18,19 +18,28 @@ class LoginViewController: UIViewController {
     let login_view_model = LoginViewModel()
     
     @IBAction func sign_in_button(_ sender: Any)  {
-        login_view_model.check_user_exists(email: email_text_field.text ?? "", password: password_text_field.text ?? "") { result in
+        self.sign_in_loading_button.animated_button(shoud_load: true)
+        login_view_model.check_user_exists(email: email_text_field.text ?? "", password: password_text_field.text ?? "") { result, username in
             if result {
-                print("User exists")
+                self.change_view_to_coin(with: "coin_storyboard_id", username)
             } else {
-                print("User does not exist")
+                self.change_view_to_coin(with: "login_storyboard_id", username)
             }
         }
-        // sign_in_loading_button.animated_button(shoud_load: true)
     }
     
     @IBAction func sign_up_button(_ sender: Any) {
         let sign_up_view_controller = self.storyboard?.instantiateViewController(withIdentifier: "register_storyboard_id") as! RegisterViewController
         navigationController?.pushViewController(sign_up_view_controller, animated: true)
+    }
+    
+    func change_view_to_coin(with identifier: String, _ username: String) {
+        let view_controller = (self.storyboard?.instantiateViewController(withIdentifier: identifier))!
+        view_controller.modalPresentationStyle = .fullScreen
+        if let controller = view_controller as? CoinViewController {
+            controller.username = username
+        }
+        self.present(view_controller, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -41,3 +50,14 @@ class LoginViewController: UIViewController {
 
 
 
+/*
+ 
+ func change_view_to_coin(with identifier: String, _ username: String) {
+     let view_controller = (self.storyboard?.instantiateViewController(withIdentifier: identifier))!
+     view_controller.modalPresentationStyle = .fullScreen
+     if ((view_controller as? CoinViewController) != nil) {
+         view_controller.username = username
+     }
+     self.present(view_controller, animated: true, completion: nil)
+ }
+ */

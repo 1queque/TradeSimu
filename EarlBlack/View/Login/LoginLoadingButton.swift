@@ -50,11 +50,6 @@ class LoginLoadingButton: UIButton {
                     sub_view.removeFromSuperview()
                 }
             }
-            UIView.animate(withDuration: 0.2, animations: {
-                self.layer.cornerRadius = 5.0
-                self.frame = self.original_size!
-                self.setTitle("", for: .normal)
-            })
         }
     }
 }

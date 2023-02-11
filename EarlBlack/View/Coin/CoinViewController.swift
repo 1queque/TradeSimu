@@ -15,12 +15,14 @@ class CoinViewController: UIViewController {
     var api_data: [Any] = []
     let api_session_request = CoinApiUrlSession()
     let query_items_instance = QueryItems()
+    var username: String?
+    
+    @IBOutlet weak var user_profile_button: UIBarButtonItem!
     
     override func viewDidLoad()  {
         super.viewDidLoad()
-        
         query_items_instance.load_query_items()
-        
+        self.user_profile_button.title = self.username
         api_session_request.get_data_from_api(query_items_instance.query_items) {
             [weak self] (api_data) in
             self!.api_data = api_data as [Any]
@@ -33,6 +35,12 @@ class CoinViewController: UIViewController {
         }
         coinTableView.delegate = self
         coinTableView.dataSource = self
+    }
+    
+    @IBAction func go_to_user_profile(_ sender: Any) {
+        let view_controller = self.storyboard?.instantiateViewController(withIdentifier: "user_profile_storyboard_id") as? UserProfileViewController
+        view_controller?.modalPresentationStyle = .fullScreen
+        self.present(view_controller!, animated: true, completion: nil)
     }
 }
 

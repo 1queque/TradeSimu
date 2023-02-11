@@ -43,6 +43,7 @@
 		C3E45C95285B3F8700A6DB92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3E45C94285B3F8700A6DB92 /* GoogleService-Info.plist */; };
 		C3E45C98285B412F00A6DB92 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C3E45C97285B412F00A6DB92 /* FirebaseDatabase */; };
 		C3E6554B295D6805008D8349 /* LoginLoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6554A295D6805008D8349 /* LoginLoadingButton.swift */; };
+		C3F65CDA29964F6A00D0CBCA /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F65CD929964F6A00D0CBCA /* UserProfileViewController.swift */; };
 		DE7BCBC44C568088C5FC19AE /* Pods_EarlBlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A3499778338D78455A1382 /* Pods_EarlBlack.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		C3DCEAE42897C7A4004280AF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C3E45C94285B3F8700A6DB92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3E6554A295D6805008D8349 /* LoginLoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadingButton.swift; sourceTree = "<group>"; };
+		C3F65CD929964F6A00D0CBCA /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C9D508AE02E45CDA7D8DDD6A /* Pods-EarlBlackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlBlackTests.debug.xcconfig"; path = "Target Support Files/Pods-EarlBlackTests/Pods-EarlBlackTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +320,7 @@
 		C39D841427D7837F000BCE6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C3F65CD82996381600D0CBCA /* User */,
 				C39D1DB52859FD8700D5F5E8 /* Coin */,
 				C39D1DB42859FD8000D5F5E8 /* Login */,
 				C3AF932E2858968900466387 /* Register */,
@@ -341,6 +344,14 @@
 				C3B867B52853694A001396AD /* StringExtension.swift */,
 			);
 			path = CustomExtensions;
+			sourceTree = "<group>";
+		};
+		C3F65CD82996381600D0CBCA /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C3F65CD929964F6A00D0CBCA /* UserProfileViewController.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3DCEAE52897C7A4004280AF /* LoginViewModel.swift in Sources */,
+				C3F65CDA29964F6A00D0CBCA /* UserProfileViewController.swift in Sources */,
 				C350FDD72860A290004D2F58 /* FirebaseEndpoint.swift in Sources */,
 				C3AF93352858AD5B00466387 /* RegisterFormViewController.swift in Sources */,
 				C3B840792849F5CE00B77D64 /* LoginViewController.swift in Sources */,

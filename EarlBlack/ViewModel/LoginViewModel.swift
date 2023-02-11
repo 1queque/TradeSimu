@@ -13,17 +13,17 @@ class LoginViewModel{
     
     init(){}
     
-    func check_user_exists(email: String, password:String, completion: @escaping (Bool) -> Void) {
+    func check_user_exists(email: String, password:String, completion: @escaping (Bool, String) -> Void) {
         self.firebase_manager.get_user(email: email).done { userData in
             for user in userData{
                 if (email == user.value["email"] as! String && password == user.value["password"] as! String) {
-                    completion(true)
+                    completion(true, user.value["username"] as! String)
                 } else {
-                    completion(false)
+                    completion(false, "")
                 }
             }
         }.catch { error in
-            completion(false)
+            completion(false, "")
         }
     }
 }
